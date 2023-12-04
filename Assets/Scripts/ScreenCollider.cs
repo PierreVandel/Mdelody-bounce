@@ -40,6 +40,9 @@ public class ScreenCollider : MonoBehaviour
         //reflect the current velocity at the edge normal
         colliderRB.velocity = Vector2.Reflect(colliderRB.velocity, normal);
     }
+
+    // TODO : Trouble with the GetClosestPoint when the ball collide an edge collider (in the corner for exemple), the closest point is not the hit point anymore
+
     //Goes through edgeCollider Points and returns the one closest to position
     Vector2 GetClosestPoint(Vector2 position)
     {
