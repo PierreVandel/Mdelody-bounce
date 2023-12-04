@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawnable : MonoBehaviour
 {
-    public GameObject spawnObject;
+    public GameObject ObjectToSpawn;
 
-    private GameObject[] Balls;
+    private GameObject[] _Balls;
 
     // Start is called before the first frame update
     void Start()
@@ -23,36 +23,36 @@ public class Spawnable : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            UpdateBalls();
-            SpawnObject();
+            _UpdateBalls();
+            _SpawnObject();
         }
     }
 
-    private void SpawnObject()
+    private void _SpawnObject()
     {
-        Vector3 mousePosition = GetMousePosition();
+        Vector3 mousePosition = _GetMousePosition();
         
-        if (DetectBallOverlap(new Vector2(mousePosition.x, mousePosition.y)))
+        if (_DetectBallOverlap(new Vector2(mousePosition.x, mousePosition.y)))
             return;
 
         Vector3 offset = new Vector3(0, 0, 10);
 
-        Instantiate(spawnObject, mousePosition + offset, Quaternion.identity);
+        Instantiate(ObjectToSpawn, mousePosition + offset, Quaternion.identity);
     }
 
-    private Vector3 GetMousePosition()
+    private Vector3 _GetMousePosition()
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    private void UpdateBalls()
+    private void _UpdateBalls()
     {
-        Balls = GameObject.FindGameObjectsWithTag("Ball");
+        _Balls = GameObject.FindGameObjectsWithTag("Ball");
     }
 
-    private bool DetectBallOverlap(Vector2 Pos)
+    private bool _DetectBallOverlap(Vector2 Pos)
     {
-        foreach (GameObject ball in Balls)
+        foreach (GameObject ball in _Balls)
         {
             Collider2D c = ball.GetComponent<CircleCollider2D>();
             if (c.OverlapPoint(Pos))
