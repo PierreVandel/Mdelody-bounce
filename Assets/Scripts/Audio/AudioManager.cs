@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    public Sound[] SfxSounds;
+    public TSound[] SfxSounds;
     public AudioSource SfxSrc;
 
     public void Awake()
@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(string Name)
     {
-        Sound s = System.Array.Find(SfxSounds, e => e.Name == Name);
+        TSound s = System.Array.Find(SfxSounds, e => e.Name == Name);
 
         if (s == null)
         {

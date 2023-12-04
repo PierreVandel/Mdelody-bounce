@@ -29,7 +29,7 @@ public class ScreenCollider : MonoBehaviour
 
         // Play Sound here
         int ballID = collision.gameObject.GetComponent<BallID>().ID;
-        AudioManager.Instance.PlaySFX(SoundName.Piano[ballID % 7]);
+        AudioManager.Instance.PlaySFX(ESoundName.Piano[ballID % 7]);
     }
     //runs when colliding if collider set to Trigger
     void OnTriggerEnter2D(Collider2D collider)
