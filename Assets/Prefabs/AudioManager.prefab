@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6522408223043209963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6522408223043209961}
+  - component: {fileID: 6522408223043209962}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6522408223043209961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522408223043209963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0069999695, y: 0, z: 0.50002}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6522408223043209962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6522408223043209963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f337495205c93a540a4b755772f728ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SfxSounds:
+  - Name: sample_test
+    Clip: {fileID: 8300000, guid: f195e673caf07724da62a936014ea29c, type: 3}
+  - Name: do
+    Clip: {fileID: 8300000, guid: 420b3293397790e42abc5bb682f65cc8, type: 3}
+  - Name: re
+    Clip: {fileID: 8300000, guid: 0680ef592d412124380bef7302a1ae04, type: 3}
+  - Name: mi
+    Clip: {fileID: 8300000, guid: 70b95346072c1c14598338388239a074, type: 3}
+  - Name: fa
+    Clip: {fileID: 8300000, guid: 0e51b9f090a84e745ae18fd9d814fc0c, type: 3}
+  - Name: sol
+    Clip: {fileID: 8300000, guid: 3107a6aa022dd67428c572af10e45bad, type: 3}
+  - Name: la
+    Clip: {fileID: 8300000, guid: 233e3f89a1dfe4e4185b641442c8bf3b, type: 3}
+  - Name: si
+    Clip: {fileID: 8300000, guid: e04679819226f3e4295fa9ae3fd0ec35, type: 3}
+  SfxSrc: {fileID: 0}

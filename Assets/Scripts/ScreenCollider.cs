@@ -27,7 +27,9 @@ public class ScreenCollider : MonoBehaviour
         Rigidbody2D collidingRB = collision.transform.GetComponent<Rigidbody2D>();
         collidingRB.velocity = Vector3.Reflect(collision.transform.GetComponent<Throwable>().velocity, -collision.contacts[0].normal);
 
-        AudioManager.Instance.PlaySFX(SoundName.SampleTest);
+        // Play Sound here
+        int ballID = collision.gameObject.GetComponent<BallID>().ID;
+        AudioManager.Instance.PlaySFX(SoundName.Piano[ballID % 7]);
     }
     //runs when colliding if collider set to Trigger
     void OnTriggerEnter2D(Collider2D collider)
