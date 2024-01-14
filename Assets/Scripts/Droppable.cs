@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DroppableComponent : MonoBehaviour, IDropHandler
+public class Droppable : MonoBehaviour, IDropHandler
 {
     TSlot Slot;
 
@@ -29,7 +29,7 @@ public class DroppableComponent : MonoBehaviour, IDropHandler
             return;
         }
 
-        DraggableComponent d = g.GetComponent<DraggableComponent>();
+        Draggable d = g.GetComponent<Draggable>();
 
         if (d.Slot == Slot)
         {

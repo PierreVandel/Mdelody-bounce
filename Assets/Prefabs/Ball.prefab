@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 523349566267668743}
   - component: {fileID: 523349566267668742}
   - component: {fileID: 523349566267668748}
-  - component: {fileID: 1661693366878287587}
+  - component: {fileID: 7967991670414189666}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
+  lrMat: {fileID: 2100000, guid: 64a7ea3a9277b574d9bc92ff8c5450d7, type: 2}
 --- !u!114 &523349566267668748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
---- !u!114 &1661693366878287587
+--- !u!114 &7967991670414189666
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -390,5 +391,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartPosition: {x: 0, y: 0, z: 0}
-  SlotIndex: 0
-  SlotType: 0
+  Slot:
+    SlotIndex: 0
+    SlotType: 0

@@ -8,6 +8,8 @@ public class Throwable : MonoBehaviour
     Rigidbody2D _rb;
     LineRenderer _lr;
     public Vector3 velocity;
+    public Material lrMat;
+
 
     public void getVelocity()
     {
@@ -18,6 +20,7 @@ public class Throwable : MonoBehaviour
     {
         _rb = this.GetComponent<Rigidbody2D>();
         _lr = this.GetComponent<LineRenderer>();
+        _lr.material = lrMat;
     }
     //onmouse events possible thanks to monobehaviour + collider2d
     void OnMouseDown()
