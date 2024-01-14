@@ -346,6 +346,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 523349565414666059, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
+      propertyPath: MaxDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 523349565414666059, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 523349566267668741, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
       propertyPath: m_Name
       value: Ball
