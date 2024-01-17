@@ -29,7 +29,6 @@ public class ScreenCollider : MonoBehaviour
 
         // Play Sound here
         int ballID = collision.gameObject.GetComponent<BallID>().ID;
-        Debug.Log("ballID : " + ballID);
         AudioManager.Instance.PlaySFX(ESoundName.Piano[ballID % 7]);
     }
     //runs when colliding if collider set to Trigger
@@ -47,7 +46,6 @@ public class ScreenCollider : MonoBehaviour
 
         // Play Sound here
         int ballID = collider.gameObject.GetComponent<BallID>().ID;
-        Debug.Log("ballID : " + ballID);
         AudioManager.Instance.PlaySFX(ESoundName.Piano[ballID % 7]);
     }
 
