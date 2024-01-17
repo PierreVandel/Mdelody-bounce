@@ -708,7 +708,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd04e7429756cbc46b7554228b365fa3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObjectToSpawn: {fileID: 523349566267668741, guid: 6fdea9f93d359294cbbb6377003a6353, type: 3}
+  ObjectsToSpawn:
+  - {fileID: 523349566267668741, guid: 628de0a7c8272554d86c763847775647, type: 3}
+  - {fileID: 523349566267668741, guid: 0582343e1f62b0e418d18b397cafa8c5, type: 3}
+  - {fileID: 523349566267668741, guid: be629796dc8047146b0ca547da8b80b0, type: 3}
+  - {fileID: 523349566267668741, guid: 6fdea9f93d359294cbbb6377003a6353, type: 3}
+  - {fileID: 523349566267668741, guid: 8001bb4bebb3c5b4d99e220475a72aa6, type: 3}
+  - {fileID: 523349566267668741, guid: ff5a8ca69373712469a79d6fc2fec82c, type: 3}
+  - {fileID: 523349566267668741, guid: 7029bb5cf0912f34d91d68a19eca9d52, type: 3}
 --- !u!4 &1688356535
 Transform:
   m_ObjectHideFlags: 0
