@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawnable : MonoBehaviour
 {
-    public GameObject ObjectToSpawn;
+    public GameObject[] ObjectsToSpawn;
 
     private GameObject[] _Balls;
 
@@ -37,7 +37,30 @@ public class Spawnable : MonoBehaviour
 
         Vector3 offset = new Vector3(0, 0, 10);
 
-        Instantiate(ObjectToSpawn, mousePosition + offset, Quaternion.identity);
+        bool touch1 = Input.GetKey(KeyCode.A);
+        bool touch2 = Input.GetKey(KeyCode.Z);
+        bool touch3 = Input.GetKey(KeyCode.E);
+        bool touch4 = Input.GetKey(KeyCode.R);
+        bool touch5 = Input.GetKey(KeyCode.T);
+        bool touch6 = Input.GetKey(KeyCode.Y);
+        bool touch7 = Input.GetKey(KeyCode.U);
+
+        if (touch1)
+            Instantiate(ObjectsToSpawn[0], mousePosition + offset, Quaternion.identity);
+        else if (touch2)
+            Instantiate(ObjectsToSpawn[1], mousePosition + offset, Quaternion.identity);
+        else if (touch3)
+            Instantiate(ObjectsToSpawn[2], mousePosition + offset, Quaternion.identity);
+        else if (touch4)
+            Instantiate(ObjectsToSpawn[3], mousePosition + offset, Quaternion.identity);
+        else if (touch5)
+            Instantiate(ObjectsToSpawn[4], mousePosition + offset, Quaternion.identity);
+        else if (touch6)
+            Instantiate(ObjectsToSpawn[5], mousePosition + offset, Quaternion.identity);
+        else if (touch7)
+            Instantiate(ObjectsToSpawn[6], mousePosition + offset, Quaternion.identity);
+        else
+            Instantiate(ObjectsToSpawn[_Balls.Length % 7], mousePosition + offset, Quaternion.identity);
     }
 
     private Vector3 _GetMousePosition()
