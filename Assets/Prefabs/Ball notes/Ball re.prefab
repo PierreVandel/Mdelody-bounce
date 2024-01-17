@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1493988262419699556}
   m_Layer: 0
   m_Name: Ball re
-  m_TagString: Ball
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 523349566267668747, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 523349566267668747, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -151,7 +151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 523349566267668747, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.95728
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 523349566267668747, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
       propertyPath: m_LocalRotation.w

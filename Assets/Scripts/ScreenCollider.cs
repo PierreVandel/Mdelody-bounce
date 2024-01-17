@@ -44,6 +44,11 @@ public class ScreenCollider : MonoBehaviour
         Vector2 normal = Vector2.Perpendicular(contactPoint - GetClosestPoint(collider.transform.position)).normalized;
         //reflect the current velocity at the edge normal
         colliderRB.velocity = Vector2.Reflect(colliderRB.velocity, normal);
+
+        // Play Sound here
+        int ballID = collider.gameObject.GetComponent<BallID>().ID;
+        Debug.Log("ballID : " + ballID);
+        AudioManager.Instance.PlaySFX(ESoundName.Piano[ballID % 7]);
     }
 
     // TODO : Trouble with the GetClosestPoint when the ball collide an edge collider (in the corner for exemple), the closest point is not the hit point anymore
