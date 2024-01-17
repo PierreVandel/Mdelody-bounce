@@ -6,7 +6,7 @@ public class Spawnable : MonoBehaviour
 {
     public GameObject[] ObjectsToSpawn;
 
-    private GameObject[] _Balls;
+    private List<GameObject> _Balls;
 
     // Start is called before the first frame update
     void Start()
@@ -21,10 +21,15 @@ public class Spawnable : MonoBehaviour
 
     public void SpawnOnClick()
     {
+        _UpdateBalls();
         if (Input.GetMouseButtonDown(0))
         {
-            _UpdateBalls();
             _SpawnObject();
+        }
+
+        if (Input.GetKey(KeyCode.Backspace))
+        {
+            _ResetBalls();
         }
     }
 
@@ -59,8 +64,6 @@ public class Spawnable : MonoBehaviour
             Instantiate(ObjectsToSpawn[5], mousePosition + offset, Quaternion.identity);
         else if (touch7)
             Instantiate(ObjectsToSpawn[6], mousePosition + offset, Quaternion.identity);
-        else
-            Instantiate(ObjectsToSpawn[_Balls.Length % 7], mousePosition + offset, Quaternion.identity);
     }
 
     private Vector3 _GetMousePosition()
@@ -68,9 +71,25 @@ public class Spawnable : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
+    private void _ResetBalls()
+    {
+        AudioManager.Instance.StopSFX();
+
+        for (int i = 0; i < _Balls.Count; i++)
+        {
+            GameObject ball = _Balls[i];
+
+            Destroy(ball);
+        }
+
+        // Clear list after destroying all balls
+        _Balls.Clear();
+    }
+
     private void _UpdateBalls()
     {
-        _Balls = GameObject.FindGameObjectsWithTag("Ball");
+        _Balls = new List<GameObject>();
+        _Balls.AddRange(GameObject.FindGameObjectsWithTag("Ball"));
     }
 
     private bool _DetectBallOverlap(Vector2 Pos)

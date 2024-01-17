@@ -125,6 +125,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1493988262419699556}
     m_Modifications:
+    - target: {fileID: 523349565414666059, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e04679819226f3e4295fa9ae3fd0ec35, type: 3}
     - target: {fileID: 523349566267668741, guid: 35c6a19ca25812948b9e81d0f4c34c5d, type: 3}
       propertyPath: m_Name
       value: Ball
